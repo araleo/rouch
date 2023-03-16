@@ -6,6 +6,14 @@ A system agnostic substitute for the linux touch command that also creates inter
 
 rouch <path>
 
-## To create a new empty file
+## To create a new empty file in the current dir
 
-rouch
+`rouch filename.ext`
+
+## To create a new empty file in a specified dir, creating intermediate folders if they don't exist
+
+`rouch some/system/path/filename.ext`
+
+## Supports windows syntax
+
+`rouch some\system\path\filename.ext`
