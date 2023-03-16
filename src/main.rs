@@ -8,7 +8,7 @@ use std::{
 fn main() {
     let args: Vec<String> = env::args().collect();
     check_args(&args);
-    let filepath = &args[1].replace('\\', "/");
+    let filepath = &args[1].replace('\\', "/").replace("//", "/");
     let elements = split_filepath_and_filename(filepath);
     let dir_path = handle_dirs(&elements[0]);
     handle_file(&elements[1], dir_path);
